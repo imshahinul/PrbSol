@@ -7,7 +7,7 @@ class Solution:
         for i in range(n + 1):
             while jumps and (i == n or arr[jumps[-1]] < arr[i]):
                 indices = [jumps.pop()]
-                while jumps and arr[jumps[-1] == arr[indices[0]]]:
+                while jumps and arr[jumps[-1]] == arr[indices[0]]:
                     indices.append(jumps.pop())
                 for j in indices:
                     if i < n and i - j <= d:
